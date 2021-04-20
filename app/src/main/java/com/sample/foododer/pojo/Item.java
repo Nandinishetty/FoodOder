@@ -130,13 +130,6 @@ public class Item {
         this.quantity = quantity;
     }
 
-    public Boolean getTaxable() {
-        return taxable;
-    }
-
-    public void setTaxable(Boolean taxable) {
-        this.taxable = taxable;
-    }
 
 }
 
