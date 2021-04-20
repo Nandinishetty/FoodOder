@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="@string/your_orders"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="18sp"
+                android:layout_marginStart="8dp"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_toEndOf="@+id/ivBack" />
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back_left"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/pro_back"
+                app:shapeAppearanceOverlay="@style/circleRd"/>
+
+            <TextView
+                android:id="@+id/tvStoreName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_toEndOf="@+id/ivIcon"
+                android:layout_toRightOf="@+id/ivIcon"
+                android:text="@string/store_name"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_amount"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="18sp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/tvPlaceName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@+id/ivIcon"
+                android:layout_toRightOf="@+id/ivIcon"
+                android:text="@string/andheri_west"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="14sp"
+                android:layout_below="@+id/tvStoreName"/>
+
+            <TextView
+                android:id="@+id/tvOrderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@+id/ivIcon"
+                android:layout_toRightOf="@+id/ivIcon"
+                android:text="@string/order_on"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="14sp"
+                android:layout_below="@+id/tvPlaceName"/>
+
+            <TextView
+                android:id="@+id/tvPayMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_toEndOf="@+id/ivIcon"
+                android:layout_toRightOf="@+id/ivIcon"
+                android:text="@string/payment_mode"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="14sp"
+                android:layout_below="@+id/tvOrderDate"/>
+
+            <RelativeLayout
+                android:id="@+id/rlTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorGreen"
+                android:layout_below="@+id/tvPayMode">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_bill"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/tvRestoDisc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_amount"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toLeftOf="@+id/tvTotalBill"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="18sp"
+                    android:background="@drawable/strick"
+                    android:layout_toStartOf="@+id/tvTotalBill" />
+
+                <TextView
+                    android:id="@+id/tvTotalBill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_amount"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlTotal"/>
+
+            <TextView
+                android:id="@+id/tvSubtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/subtotal"
+                android:textColor="@color/colorGrey"
+                android:textSize="16sp"
+                android:layout_below="@+id/recyclerView" />
+
+            <TextView
+                android:id="@+id/tvTaxes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/taxes"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                android:layout_below="@+id/tvSubtotal" />
+
+            <TextView
+                android:id="@+id/tvDisc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/discount"
+                android:textColor="@color/colorGreen"
+                android:textSize="16sp"
+                android:layout_below="@+id/tvTaxes" />
+
+            <TextView
+                android:id="@+id/tvCouponDisc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/coupon_discount"
+                android:textColor="@color/colorGreen"
+                android:textSize="16sp"
+                android:layout_below="@+id/tvDisc" />
+
+            <TextView
+                android:id="@+id/tvSubTtl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/total_amount"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/recyclerView" />
+
+            <TextView
+                android:id="@+id/tvTaxe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/total_amount"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvSubTtl" />
+
+            <TextView
+                android:id="@+id/tvDiscAmout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/total_amount"
+                android:textColor="@color/colorGreen"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvTaxe" />
+
+            <TextView
+                android:id="@+id/tvCouponDiscAmout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/total_amount"
+                android:textColor="@color/colorGreen"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvDiscAmout" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorGreen"
+                android:layout_below="@+id/tvCouponDisc"/>
+
+            <TextView
+                android:id="@+id/tvTotalB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/total_bill"
+                android:textColor="@color/colorGreen"
+                android:textSize="16sp"
+                android:layout_below="@+id/view2" />
+
+            <TextView
+                android:id="@+id/tvTotalBillAmt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/total_amount"
+                android:textColor="@color/colorGreen"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/view2"
+                android:layout_alignParentEnd="true" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/colorGreen"
+                android:layout_below="@+id/tvTotalB" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

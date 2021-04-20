@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FoodOder</string>
+    <string name="your_orders">Your Orders</string>
+    <string name="store_name">Pastovilla</string>
+    <string name="order_on">Order on:10 March 2021 8:00 PM</string>
+    <string name="andheri_west">Andheri west</string>
+    <string name="payment_mode">Payment mode:Cash</string>
+    <string name="total_amount">₹ 234</string>
+    <string name="total_bill">Total Bill</string>
+    <string name="customization_mayo_sauce">Customization mayo sauce</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="taxes">Taxes</string>
+    <string name="discount">Discount</string>
+    <string name="coupon_discount">Coupon Discount</string>
+</resources>
