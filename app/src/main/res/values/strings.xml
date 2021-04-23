@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FoodOder</string>
+    <string name="app_name">FoodOrder</string>
     <string name="your_orders">Your Orders</string>
     <string name="store_name">Pastovilla</string>
     <string name="order_on">Order on:10 March 2021 8:00 PM</string>
